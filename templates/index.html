@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Deteksi Cyberbullying</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+/*header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 100%; /* only for demonstration, should be removed */
+  background: #C6DBDC;
+  text-align: center;
+}
+
+div {
+     padding: 10px;
+     width: 90%;
+     height: 87%;
+     background-color: #E9F9F8;
+     margin-left: 5%;
+     margin-bottom: 10px;
+   }
+
+.container {border-radius: 25px;}
+
+h3 {
+    font-family: gabriola; 
+    font-size: 30px; 
+    margin: 5px;
+}
+
+form {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #E3F0F2;
+  height: 100%; /* only for demonstration, should be removed */
+}
+
+input[type=text] {
+  width: 100%;
+  height: 88px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8EABEE;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #74A1CE;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-family: Consolas;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, form {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+    <p style="text-align:center;">
+        <img src="{{url_for('static', filename='img/foto.png')}}" width="50%"/>
+    </p>
+</header>
+
+<section>
+    <form action="{{ url_for('predict') }}" method="post"">
+      <h1 style="font-family:perpetua; text-align: center; color: #4C4C4C">SISTEM DETEKSI CYBERBULLYING SOSIAL MEDIA BERBASIS AI</h1>
+      <label for="fname" style="font-family:Myanmar Text; font-weight: bold; color: #707070">INPUT TEXT :</label>
+      <input type="text" id="fname" name="fname"></br></br>
+      <button class="button" style="margin-left: 40%; color: #707070">CHECK COMMENT</button></br></br>
+      <label for="lname" style="font-family:Myanmar Text; font-weight: bold; color: #707070">RESULT :</label>
+      <input type="text" id="lname" name="lname" value="{{hasil}}" disabled></br></br>
+      
+  </form>
+
+
+
+  <nav>
+    <h3>ABOUT ME</h3>
+    <div class="container"> 
+      <p style="text-align: center; font-size: 24px; font-family: perpetua; font-style: italic; font-weight: bold; padding-top: 0px;">Universitas Amikom Yogyakarta</h3>
+        <h4 style="text-align: left; padding-left: 10px">CollectingStar :</h4>
+        <ul style="list-style-type:circle;text-align: left; margin-top: 0px; font-family: Abadi;">
+          <li>Dwiky Alfian Tama</li>
+        </ul> 
+      <p style="font-family: Abadi; font-style: italic; text-align: justify; padding: 3px;">Bullying merupakan segala bentuk penindasan atau kekerasan yang dilakukan dengan sengaja oleh satu orang atau sekelompok orang yang lebih kuat terhadap orang lain, dengan tujuan untuk menyakiti dan dilakukan secara terus menerus.<br><br>
+        Cyberbullying adalah bullying dengan menggunakan teknologi digital seperti platform sosial media untuk menakuti, membuat marah, atau mempermalukan mereka yang menjadi sasaran. <br>
+        © by CollectingStar </p>
+    </div>
+  </nav>
+  
+</section>
+
+</body>
+</html>
